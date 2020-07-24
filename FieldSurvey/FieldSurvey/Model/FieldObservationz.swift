@@ -14,10 +14,11 @@ struct FieldObservationz {
     let date: Date
     
     init(kingdom: Animal ,species: String, description: String, date: Date){
-    self.species = species
-    self.kingdom = kingdom
-    self.date = date
-    self.description = description
+        self.species = species
+        self.kingdom = kingdom
+        self.description = description
+        self.date = date
+    
     }
     init?(kingdomName: String, species: String, description: String, date: Date){
        if let kingdom = Animal(rawValue: kingdomName){

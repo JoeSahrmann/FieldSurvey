@@ -15,7 +15,7 @@ class FieldObservationsJSONParser {
         dateFormatter.dateFormat = "YYYY-MM-dd HH:mm"
         
         if let json = try? JSONSerialization.jsonObject(with: data, options: []),
-            let root = json as? [String:Any],
+            let root = json as? [String: Any],
             let status = root["status"] as? String,
             status == "ok"{
             
@@ -24,11 +24,11 @@ class FieldObservationsJSONParser {
                     if let obv = obv as? [String: String] {
                         if let kingdomName = obv["classification"],
                             let species = obv["title"],
-                            let descritpion = obv["description"],
+                            let description = obv["description"],
                             let dateString = obv["date"],
                             let date = dateFormatter.date(from: dateString) {
 
-                                if let fieldObservations = FieldObservationz(kingdomName: kingdomName, species: species, description: descritpion, date: date) {
+                                if let fieldObservations = FieldObservationz(kingdomName: kingdomName, species: species, description: description, date: date) {
                                     fieldObservation.append(fieldObservations)
                             }
                         }

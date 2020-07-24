@@ -15,7 +15,7 @@ class FieldObservationsJSONLoader{
         if let path = Bundle.main.path(forResource: fileName, ofType: "json"),
             let data = try? Data(contentsOf: URL(fileURLWithPath: path)){
             observation = FieldObservationsJSONParser.parse(data)
+        }
+        return observation
     }
-return observation
-}
 }
