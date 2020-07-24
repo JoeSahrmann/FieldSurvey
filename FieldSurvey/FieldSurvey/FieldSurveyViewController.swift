@@ -18,7 +18,7 @@ class FieldSurveyViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .medium
-        print(fieldObv.count)
+        
         // Do any additional setup after loading the view.
     }
     
